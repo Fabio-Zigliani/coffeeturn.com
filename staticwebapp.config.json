@@ -1,0 +1,43 @@
+{
+    "routes": [
+        {
+            "route": "/.auth/login/github",
+            "statusCode": 404
+        },
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": 404
+        },
+        {
+            "route": "/logout",
+            "redirect": "/.auth/logout"
+        },
+        {
+            "route": "/login",
+            "rewrite": "/.auth/login/aad"
+        },
+        {
+            "route": "/api/Secure/*",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "/index.html",
+        "exclude": [
+            "/images/*.{png,jpg,gif}",
+            "/css/*"
+        ]
+    },
+    "globalHeaders": {
+        "Access-Control-Allow-Origin": "https://dinerseat.com",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
+    },
+    "mimeTypes": {
+        ".json": "text/json",
+        ".woff2": "application/webfont",
+        ".woff": "application/webfont",
+        ".txt": "application/text"
+    }
+}

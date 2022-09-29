@@ -1,0 +1,16 @@
+{
+    "short_name": "CoffeeTurn.COM",
+    "name": "coffeeturn.com - determine who's turn it is to pay for coffee.",
+    "icons": [
+      {
+        "src": "favicon.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#FFFFFF"
+  //  "background_color": "#2196F3"
+  }
