@@ -31,7 +31,7 @@
         ]
     },
     "globalHeaders": {
-        "Access-Control-Allow-Origin": "https://dinerseat.com",
+        "Access-Control-Allow-Origin": "https://coffeeturn.com",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
     },
     "mimeTypes": {
