@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script>navigator.serviceWorker.register("js/pwabuilder-adv-sw.js")</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<title>coffeeturn.com - determine who's turn it is to pay for coffee.</title>
+
+<body>
+    <link rel="stylesheet" href="/css/milligram.css">
+    <link rel="manifest" href="manifest.json" />
+    <h1>coffeeturn.com</h1> - so you know who's turn it is to pay for coffee.
+    <h2>
+        Click below to send us an sms to Join
+    </h2>
+    You will receive an sms back and will be able to enter the code below to confirm
+    
+    <script type="module">
+        // Check that service workers are supported
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        if ('serviceWorker' in navigator) {
+            const el = document.createElement('pwa-update');
+            document.body.appendChild(el);
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./js/sw.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
