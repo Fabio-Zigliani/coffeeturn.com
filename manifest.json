@@ -1,16 +1,57 @@
 {
+    "description": "",
     "short_name": "CoffeeTurn.COM",
     "name": "coffeeturn.com - determine who's turn it is to pay for coffee.",
-    "icons": [
-      {
-        "src": "favicon.png",
-        "sizes": "144x144",
-        "type": "image/png"
-      }
-    ],
     "start_url": "index.html",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#FFFFFF"
-  //  "background_color": "#2196F3"
-  }
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "shortcuts": [
+        {
+            "name": "SignUp",
+            "short_name": "Signup",
+            "description": "Signup to start using the CoffeeTurn App",
+            "url": "https://coffeeturn.com/signup.html",
+            "icons": [
+                {
+                    "src": "https://pwabuilder.com/assets/icons/icon_192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://www.coffeeturn.com/images/screen1.png",
+            "sizes": "2880x1800",
+            "type": "image/png",
+            "description": "PWABuilder Home Screen"
+        },
+        {
+            "src": "https://www.coffeeturn.com/images/screen2.png",
+            "sizes": "2880/1800",
+            "type": "image/png",
+            "description": "PWABuilder Report Card"
+        },
+        {
+            "src": "https://www.coffeeturn.com/images/screen3.png",
+            "sizes": "2880x1800",
+            "type": "image/png",
+            "description": "Manifest information on the Report Card"
+        }
+    ],
+    "related_applications": [
+        {
+          "platform": "Consiliario Limited",
+          "url": "https://www.consiliariolimited.com"
+        }
+      ]
+}
