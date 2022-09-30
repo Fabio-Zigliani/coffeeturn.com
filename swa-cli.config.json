@@ -4,7 +4,7 @@
     "coffeeturn.com": {
       "appLocation": ".",
       "apiLocation": "api",
-      "outputLocation": "dist",
+      "outputLocation": "",
       "appBuildCommand": "npm run build",
       "apiBuildCommand": "npm run build --if-present",
       "run": "npm run dev",
