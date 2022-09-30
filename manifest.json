@@ -12,10 +12,10 @@
             "name": "SignUp",
             "short_name": "Signup",
             "description": "Signup to start using the CoffeeTurn App",
-            "url": "https://coffeeturn.com/signup.html",
+            "url": "https://coffeeturn.com/Join.html",
             "icons": [
                 {
-                    "src": "https://pwabuilder.com/assets/icons/icon_192.png",
+                    "src": "https://coffeeturn.com/favicon.png",
                     "sizes": "192x192"
                 }
             ]
