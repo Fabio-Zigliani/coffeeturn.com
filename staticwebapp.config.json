@@ -1,41 +1,27 @@
 {
+    "navigationFallback": {     
+      "rewrite": "/index.html",
+      "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+    },
     "routes": [
-        {
-            "route": "/.auth/login/github",
-            "statusCode": 404
-        },
-        {
-            "route": "/.auth/login/twitter",
-            "statusCode": 404
-        },
-        {
-            "route": "/logout",
-            "redirect": "/.auth/logout"
-        },
-        {
-            "route": "/login",
-            "rewrite": "/.auth/login/aad"
-        },
-        {
-            "route": "/api/Secure/*",
-            "allowedRoles": [
-                "authenticated"
-            ]
-        }
+      {"route": "/.auth/login/github","statusCode": 404},
+      {"route": "/.auth/login/twitter","statusCode": 404},
+      {"route": "/logout","redirect": "/.auth/logout"},
+      {"route": "/login","rewrite": "/.auth/login/aad"},
+      {"route": "/api/Secure/*","allowedRoles": ["authenticated"]}
     ],
-    "navigationFallback": {
-        "rewrite": "/index.html",
-        "exclude": [
-            "/images/*.{png,jpg,gif}",
-            "/css/*"
-        ]
+    "responseOverrides":{
+      "401": {
+        "statusCode":302,"redirect":"/login"
+      }
     },
     "globalHeaders": {
         "Access-Control-Allow-Origin": "https://coffeeturn.com",
         "Access-Control-Allow-Methods": "POST, GET, OPTIONS, PUT, PATCH, DELETE"
     },
     "mimeTypes": {
-        ".json": "text/json",
+        ".js":"application/javascript",
+        ".json":"text/json",
         ".woff2": "application/webfont",
         ".woff": "application/webfont",
         ".txt": "application/text"
