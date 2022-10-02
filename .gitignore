@@ -55,3 +55,6 @@ pids
 *.pid
 *.seed
 *.pid.lock
+
+# code analysis cache
+.dccache
