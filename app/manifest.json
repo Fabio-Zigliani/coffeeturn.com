@@ -12,7 +12,7 @@
             "name": "SignUp",
             "short_name": "Signup",
             "description": "Signup to start using the CoffeeTurn App",
-            "url": "https://coffeeturn.com/Join.html",
+            "url": "https://coffeeturn.com/join.html",
             "icons": [
                 {
                     "src": "https://coffeeturn.com/favicon.png",
