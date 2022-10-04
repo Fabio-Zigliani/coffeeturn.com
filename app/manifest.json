@@ -9,10 +9,22 @@
     "background_color": "#FFFFFF",
     "shortcuts": [
         {
-            "name": "SignUp",
-            "short_name": "Signup",
+            "name": "Join",
+            "short_name": "Join",
             "description": "Signup to start using the CoffeeTurn App",
             "url": "https://coffeeturn.com/join.html",
+            "icons": [
+                {
+                    "src": "https://coffeeturn.com/favicon.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "About",
+            "short_name": "About",
+            "description": "About CoffeeTurn.com",
+            "url": "https://coffeeturn.com/about.html",
             "icons": [
                 {
                     "src": "https://coffeeturn.com/favicon.png",
