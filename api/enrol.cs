@@ -26,7 +26,7 @@ namespace CoffeeTurn.Identity
             mobile = mobile ?? data?.mobile;
 
             string responseMessage = string.IsNullOrEmpty(mobile)
-                ? "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response."
+                ? $"This HTTP triggered function executed successfully.{requestBody} Pass a name in the query string or in the request body for a personalized response."
                 : $"Hello mobile {mobile}. This HTTP triggered function executed successfully.";
 
             return new OkObjectResult(responseMessage);
