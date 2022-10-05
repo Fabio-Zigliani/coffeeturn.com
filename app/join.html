@@ -24,7 +24,7 @@
     <form action="/api/enrol" method="post" id="enrolform">
         <fieldset>
             <label for="nameField">Send me a Registration Code</label>
-            <input type="text" placeholder="enter your mobile number like +64 21 999999" id="mobile">
+            <input type="text" placeholder="enter your mobile number like +64 21 999999" id="mobile" name="mobile">
             <input class="button-primary" type="submit" value="Send">
         </fieldset>
     </form>
@@ -49,8 +49,7 @@
         document.addEventListener("submit", function (event) {
             const form = event.target;
             var payload = {};
-            document
-                .querySelectorAll("#enrolform input")
+            document.querySelector('#enrolform input[id="mobile"]')
                 .forEach(function (element) { payload[element.name] = element.value });
             fetch(form.action, {method: form.method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)})
                 .then(function (response) {
