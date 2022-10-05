@@ -25,6 +25,5 @@
         ".woff2": "application/webfont",
         ".woff": "application/webfont",
         ".txt": "application/text"
-    },
-    "platform": {"apiRuntime": "dotnet:6.0"}
+    }
 }
