@@ -23,11 +23,11 @@ namespace CoffeeTurn.Identity
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
-            mobile = mobile ?? data?.mobile;
+            //mobile = mobile ?? data?.mobile;
 
             string responseMessage = string.IsNullOrEmpty(mobile)
-                ? $"This HTTP triggered function executed successfully.{requestBody} Pass a name in the query string or in the request body for a personalized response."
-                : $"Hello mobile {mobile}. This HTTP triggered function executed successfully.";
+                ? $"This HTTP triggered function executed successfully. requestbody.mobile -{data?.mobile}- Pass a name in the query string or in the request body for a personalized response."
+                : $"Hello mobile -requestbody.mobile -{data?.mobile}- mobile -{mobile}-. This HTTP triggered function executed successfully.";
 
             return new OkObjectResult(responseMessage);
         }
