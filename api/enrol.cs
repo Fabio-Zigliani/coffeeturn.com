@@ -18,8 +18,11 @@ namespace CoffeeTurn.Identity
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
-
-            string mobile = req.Query["mobile"];
+            string mobile = string.Empty;
+            if (req.Query.Count>0) 
+            {
+                mobile = req.Query["mobile"]; 
+            }
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
