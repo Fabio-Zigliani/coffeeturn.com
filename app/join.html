@@ -49,8 +49,8 @@
         document.addEventListener("submit", function (event) {
             const form = event.target;
             var payload = {};
-            document.querySelector('#enrolform input[id="mobile"]')
-                .forEach(function (element) { payload[element.name] = element.value });
+            document.querySelector('input[id="mobile"]')
+                .forEach(function (element) { payload[element.id] = element.value });
             fetch(form.action, {method: form.method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)})
                 .then(function (response) {
                     if (response.ok) {
