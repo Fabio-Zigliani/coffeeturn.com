@@ -21,7 +21,7 @@
         Click below to send us an sms to Join
     </h3>
     You will receive an sms back and will be able to enter the code below to confirm
-    <form action="/api/enrol" method="get" id="enrolform">
+    <form action="/api/enrol" method="post" id="enrolform">
         <fieldset>
             <label for="nameField">Send me a Registration Code</label>
             <input type="text" placeholder="enter your mobile number like +64 21 999999" id="mobile">
@@ -50,7 +50,7 @@
             const form = event.target;
             var payload = {};
             document
-                .querySelectorAll("#contactform input")
+                .querySelectorAll("#enrolform input")
                 .forEach(function (element) { payload[element.name] = element.value });
             fetch(form.action, {
                 method: form.method, headers: { 'Content-Type': 'application/json' },
