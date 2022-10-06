@@ -9,6 +9,5 @@ importScripts(
     {url: '/offline.html', revision: null},
     {url: '/about.html', revision: null},
     {url: '/js/sw.js', revision: null},
-    {url: '/css/milligram.css', revision: null},
     {url: '/images/logo.png', revision: null}
   ]);
