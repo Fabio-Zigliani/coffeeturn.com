@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <script>navigator.serviceWorker.register("js/sw.js")</script>
+    <script>navigator.serviceWorker.register("js/pwabuilder-sw.js")</script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <title>coffeeturn.com - so you know who's turn it is to pay for coffee.</title>
@@ -46,14 +46,8 @@
     <script type="module">
         // Check that service workers are supported
         import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-        if ('serviceWorker' in navigator) {
-            const el = document.createElement('pwa-update');
-            document.body.appendChild(el);
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('js/sw.js');
-            });
-        }
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
     </script>
 </body>
 
