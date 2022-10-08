@@ -58,9 +58,10 @@
     <script>
         document.addEventListener("submit", function (event) {
             const form = event.target;
-            var payload = {};
-            document.querySelector('input[id="mobile"]')
-                .forEach(function (element) { payload[element.id] = element.value });
+            var payload = {}
+            var element = document.getElementById('mobile')
+            payload[element.id] = element.value;
+            document.getElementById('mobile');
             fetch(form.action, { method: form.method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
                 .then(function (response) {
                     if (response.ok) {
