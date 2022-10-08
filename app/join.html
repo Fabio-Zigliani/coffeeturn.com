@@ -12,8 +12,7 @@
 <body>
     <!-- <link rel="stylesheet" href="/css/milligram.css"> -->
     <link href="css/entireframework.min.css" rel="stylesheet">
-    <link rel="manifest" href="manifest.json" />
-    <nav class="nav" tabindex="-1" onclick="this.focus()">
+      <nav class="nav" tabindex="-1" onclick="this.focus()">
         <div class="container">
             <a class="pagename current" href="https://coffeeturn.com/">CoffeeTurn.com</a>
             <a href="Index.html">Home</a>
@@ -58,11 +57,9 @@
     <script>
         document.addEventListener("submit", function (event) {
             const form = event.target;
-            var payload = {}
-            var element = document.getElementById('mobile')
-            payload[element.id] = element.value;
-            document.getElementById('mobile');
-            fetch(form.action, { method: form.method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+            var object = {};
+            formData.forEach((value, key) => object[key] = value);
+            fetch(form.action, { method: form.method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(object) })
                 .then(function (response) {
                     if (response.ok) {
                         form.reset();
