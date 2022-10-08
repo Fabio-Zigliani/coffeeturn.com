@@ -56,6 +56,7 @@
     </script>
     <script>
         document.addEventListener("submit", function (event) {
+            event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
             const plainFormData = Object.fromEntries(formData.entries());
