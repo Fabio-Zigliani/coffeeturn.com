@@ -33,13 +33,13 @@ namespace CoffeeTurn.Identity
             OkObjectResult responseResult = new OkObjectResult(responseMessage);
 
             CookieOptions option = new CookieOptions();
-            option.Expires = DateTime.Now.AddMinutes(20);
+            option.Expires = DateTime.Now.AddDays(2);
             option.Domain = ".coffeeturn.com";
             //// Make the cookie available for the browser
             option.HttpOnly = true;
 
             //// A little non logical way to actually get the HttpResponse (from the HttpRequest and its HttpContext)
-            req.HttpContext.Response.Cookies.Append("mobile", data?.mobile, option);
+            req.HttpContext.Response.Cookies.Append("CoffeeTurnMobile", "021413963", option);
             return responseResult;
         }
     }

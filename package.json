@@ -1,7 +1,7 @@
 {
     "name": "coffeeturn.com",
     "version": "1.0.0",
-    "description": "",
+    "description": "coffeeturn.com - so you know who's turn it is to pay for coffee.",
     "scripts": {
       "start": "swa start http://localhost:4820 --api-location http://localhost:7054"
     },
