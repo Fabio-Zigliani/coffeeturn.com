@@ -35,6 +35,8 @@ namespace CoffeeTurn.Identity
             CookieOptions option = new CookieOptions();
             option.Expires = DateTime.Now.AddDays(2);
             option.Domain = "coffeeturn.com";
+            option.Path = "/";
+            option.Secure = true;
             //// Make the cookie available for the browser
             option.HttpOnly = true;
 
