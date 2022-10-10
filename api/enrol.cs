@@ -18,14 +18,17 @@ namespace CoffeeTurn.Identity
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             string mobile = string.Empty;
-            if (req.Query.Count > 0)
+            // if (req.Query.Count > 0)
+            // {
+            //     mobile = req.Query["mobile"];
+            // }
+            if (req.Body == null) 
             {
-                mobile = req.Query["mobile"];
+                return new BadRequestObjectResult("{'message':'mobile missing'}");
             }
-
-            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            string requestBody = string.Empty; requestBody=await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
-            //mobile = mobile ?? data?.mobile;
+            mobile = data?.mobile;//mobile = mobile ?? data?.mobile;
 
             string responseMessage = string.IsNullOrEmpty(mobile)
                 ? $"This HTTP triggered function executed successfully. requestbody.mobile -{data?.mobile}- Pass a name in the query string or in the request body for a personalized response."

@@ -11,13 +11,16 @@
 
 <body>
     <!-- <link rel="stylesheet" href="/css/milligram.css"> -->
-    <link href="css/entireframework.min.css" rel="stylesheet">
-    <link href="css/bootstrap-plugin.css" rel="stylesheet">
-      <nav class="nav" tabindex="-1" onclick="this.focus()">
+    <!-- <link href="css/entireframework.min.css" rel="stylesheet">
+    <link href="css/bootstrap-plugin.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css"
+        integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+
+    <nav class="nav" tabindex="-1" onclick="this.focus()">
         <div class="container">
             <a class="pagename current" href="https://coffeeturn.com/">CoffeeTurn.com</a>
             <a href="Index.html">Home</a>
-            <a href="join.html">Join</a> 
+            <a href="join.html">Join</a>
             <a href="about.html">About</a>
         </div>
     </nav>
@@ -39,7 +42,8 @@
         <form action="/api/enrol" method="post" id="enrolform">
             <fieldset>
                 <label for="nameField">Send me a Registration Code</label><br>
-                <input type="text" placeholder="enter your mobile number like +64 21 999999" id="mobile" name="mobile" title="mobile"><br>
+                <input type="text" placeholder="enter your mobile number like +64 21 999999" id="mobile" name="mobile"
+                    title="mobile"><br>
                 <input class="btn btn-sm btn-a smooth" type="submit" value="Send" title="Send Button">
             </fieldset>
         </form>
@@ -61,7 +65,7 @@
             const form = event.target;
             const formData = new FormData(form);
             const plainFormData = Object.fromEntries(formData.entries());
-	        const formDataJsonString = JSON.stringify(plainFormData);
+            const formDataJsonString = JSON.stringify(plainFormData);
             // alert(plainFormData);
             fetch(form.action, { method: form.method, headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: formDataJsonString })
                 .then(function (response) {
