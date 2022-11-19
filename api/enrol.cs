@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace CoffeeTurn.Identity
+namespace api
 {
     public static class enrol
     {
@@ -18,10 +18,6 @@ namespace CoffeeTurn.Identity
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
             string mobile = string.Empty;
-            // if (req.Query.Count > 0)
-            // {
-            //     mobile = req.Query["mobile"];
-            // }
             if (req.Body == null) 
             {
                 return new BadRequestObjectResult("{'message':'mobile missing'}");
