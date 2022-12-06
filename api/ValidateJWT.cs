@@ -43,7 +43,7 @@ namespace api
 
                 // Validate the token and decode the claims.
                 claims = new JwtBuilder()
-                    .WithAlgorithm(new HMACSHA256Algorithm())
+                    .WithAlgorithm(new ECDSAAlgorithm())
                     .WithSecret("Your Secret Securtity key string")
                     .MustVerifySignature()
                     .Decode<IDictionary<string, object>>(authorizationHeader);
